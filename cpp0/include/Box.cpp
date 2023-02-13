@@ -23,7 +23,7 @@ bool is_less_than(Box box, int val) {
 }
 
 int get_max_weight(Box boxes[], int size, int maxV) {
-    int V = 0;
+    int V;
     int max = -1;
     for(int i = 0; i < size; i++) {
         V = boxes[i].length * boxes[i].width * boxes[i].height;

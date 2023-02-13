@@ -1,6 +1,4 @@
-#include <iostream>
-
-#include "Box.cpp"
+#include "./include/Box.h"
 
 int main() {
     printf("Hello, World!\n");
@@ -23,7 +21,11 @@ int main() {
 
     printf("%d\n", my_box0 == my_box1);
 
-    std::cout << my_box0 << std::endl; 
+    Box cin_box;
+
+    std::cin >> cin_box;
+
+    std::cout << cin_box << std::endl; 
 
     return 0;
 }
