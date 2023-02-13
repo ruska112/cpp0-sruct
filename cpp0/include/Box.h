@@ -15,7 +15,7 @@ bool operator==(Box box1, Box box2) {
 }
 
 std::ostream& operator<<(std::ostream& os, Box box) {
-    os << "Length: " << box.length << ", Width: " << box.width << ", Height: " << box.height << ", Weight: " << box.weight << " Value: " << box.value << ".";
+    os << "Length: " << box.length << ", Width: " << box.width << ", Height: " << box.height << ", Weight: " << box.weight << ", Value: " << box.value << ".";
     return os;
 }
 
