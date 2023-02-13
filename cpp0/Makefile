@@ -1,2 +1,2 @@
 all:
-	g++ -Wall -I ./include main.cpp -o ./bin/main && ./bin/main
+	g++ -Wall -I ./include box-test.cpp -o ./bin/box-test && ./bin/box-test.out
