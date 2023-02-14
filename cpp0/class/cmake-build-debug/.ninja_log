@@ -1,0 +1,9 @@
+# ninja log v5
+0	243	1676344041113343630	CMakeFiles/class.dir/src/Box.cpp.o	af607881c8ffeddd
+0	217	1676344269586621233	CMakeFiles/class.dir/src/main.cpp.o	8cbde172b468c0aa
+0	259	1676344269626622344	CMakeFiles/class.dir/src/Box.cpp.o	af607881c8ffeddd
+259	346	1676344269713291419	class	a19bce36362e45cd
+1	243	1676344319841340621	CMakeFiles/class.dir/src/main.cpp.o	8cbde172b468c0aa
+243	305	1676344319901342264	class	a19bce36362e45cd
+1	210	1676344375922864221	CMakeFiles/class.dir/src/main.cpp.o	8cbde172b468c0aa
+210	304	1676344376016200071	class	a19bce36362e45cd

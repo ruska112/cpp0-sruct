@@ -1,0 +1,3 @@
+/home/ruska/aksur/cpp-study/cpp0/class/cmake-build-debug/CMakeFiles/class.dir
+/home/ruska/aksur/cpp-study/cpp0/class/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ruska/aksur/cpp-study/cpp0/class/cmake-build-debug/CMakeFiles/rebuild_cache.dir

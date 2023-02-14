@@ -13,7 +13,7 @@ int main() {
 
     printf("Is less than: %d\n", is_less_than(my_box0, 40));
 
-    printf("Get max weight: %d\n", get_max_weight(boxes, 3, 8000));
+    printf("Get max weight: %lf\n", get_max_weight(boxes, 3, 8000));
 
     printf("Is fit: %d\n", is_fit(boxes, 3));
 
