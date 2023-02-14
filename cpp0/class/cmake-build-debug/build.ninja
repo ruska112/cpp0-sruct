@@ -63,6 +63,13 @@ build CMakeFiles/class.dir/src/Box.cpp.o: CXX_COMPILER__class_Debug /home/ruska/
   OBJECT_DIR = CMakeFiles/class.dir
   OBJECT_FILE_DIR = CMakeFiles/class.dir/src
 
+build CMakeFiles/class.dir/src/Container.cpp.o: CXX_COMPILER__class_Debug /home/ruska/aksur/cpp-study/cpp0/class/src/Container.cpp || cmake_object_order_depends_target_class
+  DEP_FILE = CMakeFiles/class.dir/src/Container.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  INCLUDES = -I/home/ruska/aksur/cpp-study/cpp0/class/include
+  OBJECT_DIR = CMakeFiles/class.dir
+  OBJECT_FILE_DIR = CMakeFiles/class.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target class
@@ -71,7 +78,7 @@ build CMakeFiles/class.dir/src/Box.cpp.o: CXX_COMPILER__class_Debug /home/ruska/
 #############################################
 # Link the executable class
 
-build class: CXX_EXECUTABLE_LINKER__class_Debug CMakeFiles/class.dir/src/main.cpp.o CMakeFiles/class.dir/src/Box.cpp.o
+build class: CXX_EXECUTABLE_LINKER__class_Debug CMakeFiles/class.dir/src/main.cpp.o CMakeFiles/class.dir/src/Box.cpp.o CMakeFiles/class.dir/src/Container.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/class.dir
   POST_BUILD = :
