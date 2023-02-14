@@ -7,4 +7,4 @@ include_directories(include)
 
 add_executable(class
         include/Box.h
-        src/main.cpp src/Box.cpp)
+        src/main.cpp src/Box.cpp include/Container.h)
