@@ -35,17 +35,17 @@ public:
 
     int get_value();
 
-    friend int get_sum_value(Box[], int);
-
-    friend bool is_less_than(Box, int);
-
-    friend double get_max_weight(Box[], int, int);
-
-    friend bool is_fit(Box[], int);
-
     friend bool operator==(Box, Box);
 
     friend std::ostream &operator<<(std::ostream &, Box);
 
-    friend Box operator>>(std::istream &, Box &);
+    friend std::istream &operator>>(std::istream &, Box &);
 };
+
+int get_sum_value(Box[], int);
+
+bool is_less_than(Box, int);
+
+double get_max_weight(Box[], int, int);
+
+bool is_fit(Box[], int);

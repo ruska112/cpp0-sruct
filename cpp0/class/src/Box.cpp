@@ -97,7 +97,7 @@ bool is_fit(Box boxes[], int size) {
 
     struct BoxV {
         Box box;
-        int V;
+        int V = 0;
     };
 
     BoxV boxes_V[size];
@@ -137,20 +137,23 @@ bool operator==(Box box1, Box box2) {
            box1.get_value() == box2.get_value();
 }
 
-std::ostream &operator<<(std::ostream &os, Box box) {
+std::ostream& operator<<(std::ostream &os, Box box) {
     os << "Length: " << box.get_length() << ", Width: " << box.get_width() << ", Height: " << box.get_height()
        << ", Weight: "
        << box.get_weight() << ", Value: " << box.get_value() << ".";
     return os;
 }
 
-Box operator>>(std::istream &is, Box &box) {
-    int length;
-    int width;
-    int height;
-    double weight;
-    int value;
-    is >> length >> width >> height >> weight >> value;
-    box = Box(length, width, height, weight, value);
-    return box;
+std::istream& operator>>(std::istream &is, Box &box) {
+    std::cout << "Enter length: ";
+    is >> box._length;
+    std::cout << "Enter width: ";
+    is >> box._width;
+    std::cout << "Enter height: ";
+    is >> box._height;
+    std::cout << "Enter wight: ";
+    is >> box._weight;
+    std::cout << "Enter value: ";
+    is >> box._value;
+    return is;
 }
