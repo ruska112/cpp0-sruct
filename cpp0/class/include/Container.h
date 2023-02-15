@@ -24,7 +24,11 @@ public:
 
     int add_box(Box);
 
+    Box& operator[](int);
+
     friend std::ostream &operator<<(std::ostream &, Container);
 
     friend std::istream &operator>>(std::istream &, Container &);
+
+
 };

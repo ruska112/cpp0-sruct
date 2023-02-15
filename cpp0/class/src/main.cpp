@@ -1,5 +1,7 @@
 #include <iostream>
-#include "../include/Container.h"
+#include "../include/MyNamespace.h"
+
+using namespace MyNamespace;
 
 int main() {
     Box my_box0(30, 30, 30, 10.0, 10000);
@@ -40,7 +42,9 @@ int main() {
     std::cout << container;
 
     container.delete_box(2);
+    container[0] = cin_box;
 
     std::cout << container;
+
     return 0;
 }

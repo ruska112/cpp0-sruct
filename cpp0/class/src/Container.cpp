@@ -53,6 +53,10 @@ int Container::add_box(Box box) {
     }
 }
 
+Box &Container::operator[](int index) {
+    return _boxes[index];
+}
+
 std::ostream &operator<<(std::ostream &os, Container container) {
     os << "Container:\n";
     os << "\tLength: " << container._length;
