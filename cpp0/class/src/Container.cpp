@@ -12,6 +12,34 @@ void Container::add_box_by_index(int index, Box box) {
     }
 }
 
+void Container::delete_box(int index) {
+    if (index <= _boxes.size() - 1 && index >= 0) {
+        _boxes.erase(_boxes.cbegin() + index);
+    }
+}
+
+double Container::get_sum_weight() {
+    double sum = 0;
+    for (Box box: _boxes) {
+        sum += box.get_weight();
+    }
+    return sum;
+}
+
+int Container::get_sum_value() {
+    int sum = 0;
+    for (Box box: _boxes) {
+        sum += box.get_value();
+    }
+    return sum;
+}
+
+Box Container::get_box(int index) {
+    if (index <= _boxes.size() - 1 && index >= 0) {
+        return _boxes.at(index);
+    }
+}
+
 int Container::add_box(Box box) {
     if (this->get_sum_weight() + box.get_weight() <= this->_max_weight) {
         _boxes.push_back(box);
