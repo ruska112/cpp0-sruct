@@ -137,14 +137,16 @@ bool operator==(Box box1, Box box2) {
            box1.get_value() == box2.get_value();
 }
 
-std::ostream& operator<<(std::ostream &os, Box box) {
-    os << "Length: " << box.get_length() << ", Width: " << box.get_width() << ", Height: " << box.get_height()
-       << ", Weight: "
-       << box.get_weight() << ", Value: " << box.get_value() << ".";
+std::ostream &operator<<(std::ostream &os, Box box) {
+    os << "Length: " << box.get_length();
+    os << ", Width: " << box.get_width();
+    os << ", Height: " << box.get_height();
+    os << ", Weight: " << box.get_weight();
+    os << ", Value: " << box.get_value() << ".";
     return os;
 }
 
-std::istream& operator>>(std::istream &is, Box &box) {
+std::istream &operator>>(std::istream &is, Box &box) {
     std::cout << "Enter length: ";
     is >> box._length;
     std::cout << "Enter width: ";

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/Box.h"
+#include "../include/Container.h"
 
 int main() {
     Box my_box0(30, 30, 30, 10.0, 10000);
@@ -26,5 +26,21 @@ int main() {
 
     std::cout << cin_box << std::endl;
 
+    std::cout << "----------------------------------------------------------------" << std::endl;
+
+    Container container(1000, 1000, 1000, 10000);
+
+    container.add_box(my_box0);
+    container.add_box(my_box1);
+
+    std::cout << container;
+
+    container.add_box_by_index(1, cin_box);
+
+    std::cout << container;
+
+    container.delete_box(2);
+
+    std::cout << container;
     return 0;
 }

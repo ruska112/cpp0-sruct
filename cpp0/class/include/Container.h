@@ -1,5 +1,5 @@
 #include <vector>
-
+#include <iostream>
 #include "./Box.h"
 
 class Container {
@@ -23,4 +23,8 @@ public:
     Box get_box(int);
 
     int add_box(Box);
+
+    friend std::ostream &operator<<(std::ostream &, Container);
+
+    friend std::istream &operator>>(std::istream &, Container &);
 };

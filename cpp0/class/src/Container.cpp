@@ -5,15 +5,19 @@ Container::Container(int length, int width, int height, double max_weight) :
         _length(length), _width(width), _height(height), _max_weight(max_weight) {}
 
 void Container::add_box_by_index(int index, Box box) {
-    if (this->get_sum_weight() + box.get_weight() <= this->_max_weight) {
-        _boxes.insert(_boxes.cbegin() + index, box);
+    if (index <= _boxes.size() && index >= 0) {
+        if (this->get_sum_weight() + box.get_weight() <= this->_max_weight) {
+            _boxes.insert(_boxes.cbegin() + index, box);
+        } else {
+            throw BoxAddingException("overweight");
+        }
     } else {
-        throw BoxAddingException("overweight");
+        throw std::exception();
     }
 }
 
 void Container::delete_box(int index) {
-    if (index <= _boxes.size() - 1 && index >= 0) {
+    if (index <= _boxes.size() && index >= 0) {
         _boxes.erase(_boxes.cbegin() + index);
     }
 }
@@ -35,7 +39,7 @@ int Container::get_sum_value() {
 }
 
 Box Container::get_box(int index) {
-    if (index <= _boxes.size() - 1 && index >= 0) {
+    if (index <= _boxes.size() && index >= 0) {
         return _boxes.at(index);
     }
 }
@@ -47,4 +51,36 @@ int Container::add_box(Box box) {
     } else {
         throw BoxAddingException("overweight");
     }
+}
+
+std::ostream &operator<<(std::ostream &os, Container container) {
+    os << "Container:\n";
+    os << "\tLength: " << container._length;
+    os << ", Width: " << container._width;
+    os << ", Height: " << container._height;
+    os << ", Max Weight: " << container._max_weight;
+    if (!container._boxes.empty()) {
+        os << "\nBoxes: \n";
+        for (const Box &_box: container._boxes) {
+            os << "\t";
+            os << _box;
+            os << "\n";
+        }
+        os << "\n";
+    } else {
+        os << "\nContainer is empty!\n";
+    }
+    return os;
+}
+
+std::istream &operator>>(std::istream &is, Container &container) {
+    std::cout << "Enter length: ";
+    is >> container._length;
+    std::cout << "Enter width: ";
+    is >> container._width;
+    std::cout << "Enter height: ";
+    is >> container._height;
+    std::cout << "Enter max weight: ";
+    is >> container._max_weight;
+    return is;
 }
