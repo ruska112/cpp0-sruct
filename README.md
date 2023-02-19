@@ -1,1 +1,1 @@
-CPP projects for seminars
+# cpp0-struct
